@@ -162,8 +162,9 @@ sudo apt-get install mysql-server mysql-client libmysqlclient-dev
 ========
 9º passo
 ========
-	sudo -u postgres createuser aluno -s
+	sudo -u postgres createuser aluno -s (if you get any error in this path just jump to next line)
 	sudo -u postgres psql
 	\password aluno
 	aluno
 	aluno
+	\q
