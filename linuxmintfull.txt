@@ -1,0 +1,169 @@
+﻿********************************************************************************
+*Todos os comandos são feitos no terminal/konsole do Linux (baseados em Debian)*
+* All controls are made on the terminal / konsole Linux (based on Debian)      *
+********************************************************************************
+
+ANTES DE TUDO TENHA SEU SISTEMA OPERACIONAL TOTALMENTE ATUALIZADO!
+
+===============
+INSTALANDO LAMP
+===============
+
+========
+1º passo
+========
+	sudo su
+	sudo apt-get update && sudo apt-get dist-upgrade -y
+	sudo reboot
+========
+2ª passo
+========
+	sudo apt-get install lamp-server^ -y
+	sudo nano /var/www/html/testing.php
+	Digite:
+	<?php phpinfo(); ?>
+
+CTRL+O depois CTRL+X
+========
+3º passo
+========
+	 sudo apt-get install phpmyadmin -y
+========
+4º passo
+========
+	sudo apt-get install php-mbstring php7.0-mbstring php-gettext libapache2-mod-php7.0
+	sudo systemctl restart apache2
+	sudo phpenmod mcrypt (se der erro não tem problema, é normal)
+	sudo phpenmod mbstring
+	sudo systemctl restart apache2
+========
+5º passo
+========
+
+	chmod -R 777 /var/www/
+	chmod -R 777 /var/www/html
+	cd /var/www/
+	ln -s /usr/share/phpmyadmin/
+	cd /var/www/html
+	ln -s /usr/share/phpmyadmin/
+
+==================
+HABILITANDO ERRORS
+==================
+	nano ou vim /etc/php5/apache2/php.ini
+	display_errors = on
+
+============
+SUBLIME TEXT
+============
+	$ sudo add-apt-repository ppa:webupd8team/sublime-text-3
+	$ sudo apt-get update
+	$ sudo apt-get install sublime-text-installer
+
+========
+COMPOSER
+========
+---------------------------------------------------
+|curl -sS https://getcomposer.org/installer | php |
+|mv composer.phar /usr/local/bin/COMPOSER         |
+---------------------------------------------------
+============================
+INICIANDO PROJETO EM LARAVEL
+============================
+----------------------------------------------------------------
+|composer create-project laravel/laravel projeto --prefer-dist |
+----------------------------------------------------------------
+==================
+TESTANDO O LARAVEL
+==================
+-------------------
+|php artisan serve|
+-------------------
+Open your browser and type http://localhost:8000
+Abra o seu navegador e escreva http://localhost:8000
+
+
+JAVA
+==================
+sudo add-apt-repository ppa:webupd8team/java && apt-get update && apt-get install oracle-java8-installer
+======
+chmod +x NomeDoArquivo.sh
+./NomeDoArquivo.sh
+=====IMPORTANTES=====
+sudo apt-get install wine
+sudo apt-get install codeblocks
+sudo apt-get install ubuntu-restricted-extras
+sudo apt-get install build-essential
+sudo apt-get install flashplugin-installer
+
+=====================
+----RUBY ON RAILS----
+ENTRE NO MODO SU, É OBRIGATÓRIO!!!!!
+
+========
+1º passo
+======== 
+
+	sudo apt-get update
+
+========
+2º passo
+========
+	sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
+
+========
+3º passo
+========
+	cd
+	git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+	echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+	echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+	exec $SHELL
+
+	echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
+	exec $SHELL
+
+	rbenv install 2.3.1
+	rbenv global 2.3.1
+	ruby -v
+
+========
+4º passo
+========
+	gem install bundler
+
+========
+5º passo
+========
+	curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+	sudo apt-get install -y nodejs
+
+========
+6º passo
+========
+	gem install rails -v 5.0.0.1
+	rbenv rehash
+	rails -v
+
+========
+7º passo
+========
+sudo apt-get install mysql-server mysql-client libmysqlclient-dev
+
+========
+8º passo
+========
+	sudo sh -c "echo 'deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main' > /etc/apt/sources.list.d/pgdg.list"
+	wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -
+	sudo apt-get update
+	sudo apt-get install postgresql-common
+	sudo apt-get install postgresql-9.5 libpq-dev
+
+========
+9º passo
+========
+	sudo -u postgres createuser aluno -s
+	sudo -u postgres psql
+	\password aluno
+	aluno
+	aluno
