@@ -31,7 +31,7 @@ CTRL+O depois CTRL+X
 ========
 4º passo
 ========
-	sudo apt-get install php-mbstring php7.0-mbstring php-gettext libapache2-mod-php7.0
+	sudo apt-get install -y php-mbstring php7.0-mbstring php-gettext libapache2-mod-php7.0
 	sudo systemctl restart apache2
 	sudo phpenmod mcrypt (se der erro não tem problema, é normal)
 	sudo phpenmod mbstring
@@ -83,11 +83,11 @@ sudo add-apt-repository ppa:webupd8team/java && apt-get update && apt-get instal
 chmod +x NomeDoArquivo.sh
 ./NomeDoArquivo.sh
 =====IMPORTANTES=====
-sudo apt-get install wine
-sudo apt-get install codeblocks
-sudo apt-get install ubuntu-restricted-extras
-sudo apt-get install build-essential
-sudo apt-get install flashplugin-installer
+sudo apt-get install wine -y
+sudo apt-get install codeblocks -y
+sudo apt-get install ubuntu-restricted-extras -y
+sudo apt-get install build-essential -y
+sudo apt-get install flashplugin-installer -y
 
 =====================
 ----RUBY ON RAILS----
@@ -102,7 +102,7 @@ ENTRE NO MODO SU, É OBRIGATÓRIO!!!!!
 ========
 2º passo
 ========
-	sudo apt-get install git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
+	sudo apt-get install -y git-core curl zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev
 
 ========
 3º passo
@@ -141,7 +141,7 @@ ENTRE NO MODO SU, É OBRIGATÓRIO!!!!!
 ========
 7º passo
 ========
-sudo apt-get install mysql-server mysql-client libmysqlclient-dev
+sudo apt-get install -y mysql-server mysql-client libmysqlclient-dev
 
 ========
 8º passo
@@ -149,8 +149,8 @@ sudo apt-get install mysql-server mysql-client libmysqlclient-dev
 	sudo sh -c "echo 'deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main' > /etc/apt/sources.list.d/pgdg.list"
 	wget --quiet -O - http://apt.postgresql.org/pub/repos/apt/ACCC4CF8.asc | sudo apt-key add -
 	sudo apt-get update
-	sudo apt-get install postgresql-common
-	sudo apt-get install postgresql-9.6 libpq-dev
+	sudo apt-get install -y postgresql-common
+	sudo apt-get install -y postgresql-9.6 libpq-dev
 
 ========
 9º passo
